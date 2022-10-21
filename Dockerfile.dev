@@ -1,0 +1,8 @@
+ARG NODE_VERSION=14.19.1-alpine
+FROM node:${NODE_VERSION}
+
+WORKDIR /app
+COPY . .
+RUN npm install --silent
+EXPOSE 3000
+CMD ["npm", "start"]
